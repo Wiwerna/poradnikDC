@@ -1,0 +1,481 @@
+{
+  "name": "ticket",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "bXYVZ",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Stwórz!",
+          "type": "SUCCESS",
+          "id": "msg-button-1973d1d",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "30000",
+          "actions": [
+            {
+              "info": "0",
+              "find": "992486824356356126",
+              "storage": "1",
+              "varName": "rolerole",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "rolerole",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "3",
+                "iffalseVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "title": "Twoj ticket juz istnieje",
+              "author": "",
+              "color": "",
+              "timestamp": "false",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "channel": "0",
+              "varName2": "",
+              "storage3": "1",
+              "varName3": "sticket_juz_jest",
+              "name": "Send Embed Message"
+            },
+            {
+              "time": "10",
+              "measurement": "1",
+              "name": "Wait"
+            },
+            {
+              "storage": "1",
+              "varName": "sticket_juz_jest",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "info": "2",
+              "storage": "1",
+              "varName2": "username",
+              "name": "Store Member Info"
+            },
+            {
+              "channelName": "Ticket--${tempVars(\"username\")}",
+              "topic": "✔️Oto twój ticket!",
+              "position": "",
+              "storage": "1",
+              "varName": "kanal_ticket",
+              "categoryID": "992488371672850512",
+              "reason": "",
+              "name": "Create Text Channel"
+            },
+            {
+              "channel": "3",
+              "varName": "kanal_ticket",
+              "member": "1",
+              "varName2": "",
+              "permission": "READ_MESSAGE_HISTORY",
+              "state": "0",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "channel": "3",
+              "varName": "kanal_ticket",
+              "member": "1",
+              "varName2": "",
+              "permission": "SEND_MESSAGES",
+              "state": "0",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "channel": "3",
+              "varName": "kanal_ticket",
+              "member": "1",
+              "varName2": "",
+              "permission": "VIEW_CHANNEL",
+              "state": "0",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "title": "***Ticket***",
+              "author": "",
+              "color": "RED",
+              "timestamp": "true",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_nakanal",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_nakanal",
+              "message": "Ticket stworzony przez: ${member}\nOto twój ticket, pisz tu w sprawach oraz w celu rekrutacji!\nAby ticketa zamknąć wpisz **?ticket** na tym kanale i kliknij 2 przycisk!\n```Pamiętaj tickety nie robimy bez powodu!```",
+              "name": "Set Embed Description"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_nakanal",
+              "message": "Ticket System | Bot By Wiwerna",
+              "footerIcon": "",
+              "name": "Set Embed Footer"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_nakanal",
+              "channel": "5",
+              "varName2": "kanal_ticket",
+              "storage3": "0",
+              "varName3": "",
+              "name": "Send Embed Message"
+            },
+            {
+              "info": "0",
+              "find": "992486824356356126",
+              "storage": "1",
+              "varName": "idrola",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "3",
+              "varName": "idrola",
+              "reason": "",
+              "name": "Add Member Role"
+            },
+            {
+              "title": "***Ticket***",
+              "author": "",
+              "color": "GREEN",
+              "timestamp": "true",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_stworzonykanal",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_stworzonykanal",
+              "message": "Twój ticket zostal stworzony pomyślnie!\nTicket: ${tempVars(\"kanal_ticket\")}",
+              "name": "Set Embed Description"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_stworzonykanal",
+              "message": "Sytem ticket | Bot By Wiwerna",
+              "footerIcon": "",
+              "name": "Set Embed Footer"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_stworzonykanal",
+              "channel": "0",
+              "varName2": "",
+              "storage3": "1",
+              "varName3": "sticket_stworzonykanal",
+              "name": "Send Embed Message"
+            },
+            {
+              "time": "10",
+              "measurement": "1",
+              "name": "Wait"
+            },
+            {
+              "storage": "1",
+              "varName": "sticket_stworzonykanal",
+              "reason": "",
+              "name": "Delete Message"
+            }
+          ]
+        },
+        {
+          "name": "Usuń!",
+          "type": "DANGER",
+          "id": "msg-button-6c1a415",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "30000",
+          "actions": [
+            {
+              "info": "0",
+              "find": "992486824356356126",
+              "storage": "1",
+              "varName": "idrola",
+              "name": "Find Role"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "role": "3",
+              "varName2": "idrola",
+              "branch": {
+                "iftrue": "3",
+                "iffalse": "0",
+                "iftrueVal": "5"
+              },
+              "name": "Check If Member has Role"
+            },
+            {
+              "title": "Twój ticket nie istnieje!",
+              "author": "",
+              "color": "",
+              "timestamp": "false",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "channel": "0",
+              "varName2": "",
+              "storage3": "0",
+              "varName3": "",
+              "name": "Send Embed Message"
+            },
+            {
+              "time": "10",
+              "measurement": "1",
+              "name": "Wait"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "info": "2",
+              "storage": "1",
+              "varName2": "namechanel",
+              "name": "Store Channel Info"
+            },
+            {
+              "member": "1",
+              "varName": "",
+              "info": "2",
+              "storage": "1",
+              "varName2": "username",
+              "name": "Store Member Info"
+            },
+            {
+              "storage": "1",
+              "varName": "namechanel",
+              "comparison": "3",
+              "value": "tempVars(\"username\")",
+              "branch": {
+                "iftrue": "0",
+                "iffalse": "3",
+                "iffalseVal": "5"
+              },
+              "name": "Check Variable"
+            },
+            {
+              "title": "Tej obcji możesz tylko użyć na \"swoim\" kanale!",
+              "author": "",
+              "color": "",
+              "timestamp": "true",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "channel": "0",
+              "varName2": "",
+              "storage3": "1",
+              "varName3": "sticket_juzjest",
+              "name": "Send Embed Message"
+            },
+            {
+              "time": "10",
+              "measurement": "1",
+              "name": "Wait"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_juzjest",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "name": "End Action Sequence"
+            },
+            {
+              "title": "***Ticket***",
+              "author": "",
+              "color": "RED",
+              "timestamp": "true",
+              "url": "",
+              "authorIcon": "",
+              "imageUrl": "",
+              "thumbUrl": "",
+              "storage": "1",
+              "varName": "ticket_zamknij",
+              "name": "Create Embed Message"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_zamknij",
+              "message": "Ticket zostal zamkniety przez: ${member}\nDziękujemy za współprace!",
+              "name": "Set Embed Description"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_zamknij",
+              "message": "Ticket System | Bot By Wiwerna",
+              "footerIcon": "",
+              "name": "Set Embed Footer"
+            },
+            {
+              "storage": "1",
+              "varName": "ticket_zamknij",
+              "channel": "0",
+              "varName2": "",
+              "storage3": "0",
+              "varName3": "",
+              "name": "Send Embed Message"
+            },
+            {
+              "time": "10",
+              "measurement": "1",
+              "name": "Wait"
+            },
+            {
+              "member": "1",
+              "varName2": "",
+              "role": "3",
+              "varName": "idrola",
+              "reason": "",
+              "name": "Remove Member Role"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "member": "1",
+              "varName2": "",
+              "permission": "VIEW_CHANNEL",
+              "state": "2",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "member": "1",
+              "varName2": "",
+              "permission": "READ_MESSAGE_HISTORY",
+              "state": "2",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "member": "1",
+              "varName2": "",
+              "permission": "SEND_MESSAGES",
+              "state": "2",
+              "reason": "",
+              "name": "Set Member Channel Perms"
+            },
+            {
+              "channel": "0",
+              "channelVarName": "",
+              "channelName": "",
+              "reason": "",
+              "channelEdits": {
+                "_index": 0,
+                "topic": "",
+                "categoryID": "992500744659947644",
+                "slowmode": "",
+                "position": ""
+              },
+              "name": "Edit Any Channel"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "***Ticket***",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Kliknij pierwszy przycisk poniżej aby stworzyć ticketa!\nKliknij drugi przycisk poniżej aby usunąć ticketa\n***Masz na to 30 sek!***\n\n```Tworzenie ticketa bez powodu jest karane!```",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Ticket System | Bot By Wiwerna",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0",
+  "description": "System ticketów - pomocy"
+}
